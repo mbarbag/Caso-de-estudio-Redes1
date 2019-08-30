@@ -166,7 +166,63 @@ ip dhcp pool INVITADOS
 
 
 
+PROTOCOLO EIGRP
 
+*BLOQUE M8
+
+conf ter
+router eigrp 10
+network 192.168.10.0 0.0.0.255
+network 192.168.11.0 0.0.0.255
+network 192.168.12.0 0.0.0.255
+network 172.102.0.0 0.0.255.255
+network 
+no auto-summary
+end
+
+
+
+
+*BLOQUE M5
+
+conf ter
+router eigrp 10
+network 192.168.21.0 0.0.0.255
+network 192.168.22.0 0.0.0.255
+network 192.168.23.0 0.0.0.255
+network 172.103.0.0 0.0.255.255
+network 
+no auto-summary
+end
+
+
+
+*BLOQUE 41B
+
+conf ter
+router eigrp 10
+network 192.168.31.0 0.0.0.255
+network 192.168.32.0 0.0.0.255
+network 192.168.33.0 0.0.0.255
+network 172.104.0.0 0.0.255.255
+network 
+no auto-summary
+end
+
+
+
+
+*BLOQUE 42A
+
+conf ter
+router eigrp 10
+network 192.168.41.0 0.0.0.255
+network 192.168.42.0 0.0.0.255
+network 192.168.43.0 0.0.0.255
+network 172.105.0.0 0.0.255.255
+network 
+no auto-summary
+end
 
 
 
