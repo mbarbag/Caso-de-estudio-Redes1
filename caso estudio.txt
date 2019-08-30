@@ -183,9 +183,9 @@ acces 10 permit 192.168.43.0 0.0.0.255
 
 ahora asocio la access list a las interfaces correspondiente
 
-int g9/0.2
-ip access-g 10 out
 int g9/0.3
+ip access-g 10 out
+int g9/0.4
 ip access-g 10 out
 
 Ahora para que haya trafico de vlans invitados-estudiantes:
@@ -198,9 +198,9 @@ acces 20 permit 172.104.0.0 0.0.255.255
 acces 20 permit 192.168.41.0 0.0.0.255
 acces 20 permit 172.105.0.0 0.0.255.255
 
-int g9/0.1
+int g9/0.2
 ip access-g 20 out
-int g9/0.4
+int g9/0.5
 ip access-g 20 out
 
 * M8
@@ -218,9 +218,9 @@ acces 10 permit 192.168.43.0 0.0.0.255
 
 ahora asocio la access list a las interfaces correspondiente
 
-int g8/0.2
-ip access-g 10 out
 int g8/0.3
+ip access-g 10 out
+int g8/0.4
 ip access-g 10 out
 
 Ahora para que haya trafico de vlans invitados-estudiantes:
@@ -233,9 +233,9 @@ acces 20 permit 172.104.0.0 0.0.255.255
 acces 20 permit 192.168.41.0 0.0.0.255
 acces 20 permit 172.105.0.0 0.0.255.255
 
-int g8/0.1
+int g8/0.2
 ip access-g 20 out
-int g8/0.4
+int g8/0.5
 ip access-g 20 out
 
 * 41
@@ -253,9 +253,9 @@ acces 10 permit 192.168.43.0 0.0.0.255
 
 ahora asocio la access list a las interfaces correspondiente
 
-int g6/0.2
-ip access-g 10 out
 int g6/0.3
+ip access-g 10 out
+int g6/0.4
 ip access-g 10 out
 
 Ahora para que haya trafico de vlans invitados-estudiantes:
@@ -268,9 +268,9 @@ acces 20 permit 172.104.0.0 0.0.255.255
 acces 20 permit 192.168.41.0 0.0.0.255
 acces 20 permit 172.105.0.0 0.0.255.255
 
-int g6/0.1
+int g6/0.2
 ip access-g 20 out
-int g6/0.4
+int g6/0.5
 ip access-g 20 out
 
 
@@ -289,9 +289,9 @@ acces 10 permit 192.168.43.0 0.0.0.255
 
 ahora asocio la access list a las interfaces correspondiente
 
-int g6/0.2
-ip access-g 10 out
 int g6/0.3
+ip access-g 10 out
+int g6/0.4
 ip access-g 10 out
 
 Ahora para que haya trafico de vlans invitados-estudiantes:
@@ -304,9 +304,9 @@ acces 20 permit 172.104.0.0 0.0.255.255
 acces 20 permit 192.168.41.0 0.0.0.255
 acces 20 permit 172.105.0.0 0.0.255.255
 
-int g6/0.1
+int g6/0.2
 ip access-g 20 out
-int g6/0.4
+int g6/0.5
 ip access-g 20 out
 
 --------------------------------------------------------------------------
