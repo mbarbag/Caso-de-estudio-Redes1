@@ -16,7 +16,7 @@ Suposiciones Bloque M8.
    VLAN 5 --> 172.102.0.0 / 16
 
 
-Suposiciones Bloque M7.
+Suposiciones Bloque M5.
 1. Las aulas de cómputo corresponden a la VLAN Estudiantes.
 2. Las aulas de clase corresponden a la VLAN Estudiantes.
 3. VLAN 2 --> 192.168.21.0 / 24
