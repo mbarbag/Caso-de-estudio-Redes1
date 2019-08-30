@@ -409,6 +409,19 @@ end
 
 
 
+* ROUTER DE LAS NUBES 
+
+conf ter
+router eigrp 10
+network 200.2.2.0 0.0.0.255
+network 200.6.6.0 0.0.0.255
+network 100.0.0.0 0.255.255.255
+network 181.10.0.0 0.0.255.255
+network 8.0.0.0 0.255.255.255
+no auto-summary
+end
+
+
 
 ------------------------------
 
