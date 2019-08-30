@@ -4,6 +4,8 @@ Suposiciones Generales.
    VLAN 3 --> Profesores
    VLAN 4 --> Administrativos
    VLAN 5 --> Invitados
+3. Acces 10 sera para profesores y estudiantes
+4. Acces 20 sera para Estudiantes e Invitados
 
 
 Suposiciones Bloque M8.
