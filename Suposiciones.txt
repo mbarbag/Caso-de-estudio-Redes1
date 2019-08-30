@@ -1,0 +1,39 @@
+Suposiciones Generales.
+1. La VLAN invitados solo funciona para la red wifi.
+2. VLAN 2 --> Estudiantes
+   VLAN 3 --> Profesores
+   VLAN 4 --> Administrativos
+   VLAN 5 --> Invitados
+
+
+Suposiciones Bloque M8.
+1. Los espacios de investigación corresponden a la VLAN Estudiantes.
+2. El espacio de reunión 1 corresponde a la VLAN Administrativos.
+3. Los espacios de reunión 2,3 corresponden a la VLAN Profesores.
+4. VLAN 2 --> 192.168.10.0 / 24
+   VLAN 3 --> 192.168.11.0 / 24
+   VLAN 4 --> 192.168.12.0 / 24
+   VLAN 5 --> 172.102.0.0 / 16
+
+
+Suposiciones Bloque M7.
+1. Las aulas de cómputo corresponden a la VLAN Estudiantes.
+2. Las aulas de clase corresponden a la VLAN Estudiantes.
+3. VLAN 2 --> 192.168.21.0 / 24
+   VLAN 3 --> 192.168.22.0 / 24
+   VLAN 4 --> 192.168.23.0 / 24
+   VLAN 5 --> 172.103.0.0 / 16
+
+
+Suposiciones Bloque 41b.
+1. VLAN 2 --> 192.168.31.0 / 24
+   VLAN 3 --> 192.168.32.0 / 24
+   VLAN 4 --> 192.168.33.0 / 24
+   VLAN 5 --> 172.104.0.0 / 16
+
+
+Suposiciones Bloque 42a.
+1. VLAN 2 --> 192.168.41.0 / 24
+   VLAN 3 --> 192.168.42.0 / 24
+   VLAN 4 --> 192.168.43.0 / 24
+   VLAN 5 --> 172.105.0.0 / 16
