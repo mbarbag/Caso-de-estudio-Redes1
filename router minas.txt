@@ -57,13 +57,13 @@ interface Vlan1
  shutdown
 !
 ip classless
-ip route 0.0.0.0 0.0.0.0 (aquí va la ip asociada a la llegada al router creado)
+ip route 0.0.0.0 0.0.0.0 (aquÃ­ va la ip asociada a la llegada al router creado)
 !
 ip flow-export version 9
 !
 !
 ip access-list extended TRAFICO-VPN
- permit ip 10.10.10.0 0.0.0.255 192.168.10.0 0.0.0.255
+ permit ip 192.168.101.0 0.0.0.255 192.168.111.0 0.0.0.255
 !
 !
 line con 0
