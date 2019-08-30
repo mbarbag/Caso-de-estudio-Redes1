@@ -112,7 +112,57 @@ ip dhcp pool INVITADOS
 
 
 
+BLOQUE 42 A
 
+int g6/0.2
+encapsulation dot1q 2
+ip add	192.168.41.254 255.255.255.0 
+exi
+
+
+int g6/0.3
+encapsulation dot1q 3
+ip add	192.168.42.254 255.255.255.0 
+exi
+
+int g6/0.4
+encapsulation dot1q 4
+ip add	192.168.43.254 255.255.255.0 
+exi
+
+int g6/0.5
+encapsulation dot1q 5
+ip add	172.105.0.254 255.255.0.0 
+exi
+
+ip dhcp excluded-address 192.168.41.254
+ip dhcp pool ESTUDIANTES
+ network 192.168.41.0 255.255.255.0
+ default-router 192.168.41.254
+ dns-server 10.10.10.10
+ exi
+	
+
+ip dhcp excluded-address 192.168.42.254
+ip dhcp pool PROFESORES
+ network 192.168.42.0 255.255.255.0
+ default-router 192.168.42.254
+ dns-server 10.10.10.10
+ exi
+
+ip dhcp excluded-address 192.168.43.254
+ip dhcp pool ADMINISTRATIVOS
+ network 192.168.43.0 255.255.255.0
+ default-router 192.168.43.254
+ dns-server 10.10.10.10
+ exi
+
+ip dhcp excluded-address 172.105.0.254
+ip dhcp pool INVITADOS
+ network 172.105.0.0 255.255.0.0
+ default-router 172.105.0.254
+ dns-server 10.10.10.10
+ exi
 
 
 
