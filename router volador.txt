@@ -48,7 +48,7 @@ interface GigabitEthernet9/0
  speed auto
 !
 interface GigabitEthernet6/0
- ip address 10.10.10.254 255.0.0.0
+ ip address 172.2.0.0 255.0.0.0
  duplex auto
  speed auto
 !
@@ -57,7 +57,7 @@ interface Vlan1
  shutdown
 !
 ip classless
-ip route 0.0.0.0 0.0.0.0 (aquí va la ip asociada a la llegada al router creado)
+ip route 0.0.0.0 0.0.0.0 (aquÃ­ va la ip asociada a la llegada al router creado)
 !
 ip flow-export version 9
 !
