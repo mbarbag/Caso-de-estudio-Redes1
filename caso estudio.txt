@@ -165,6 +165,154 @@ ip dhcp pool INVITADOS
  exi
 
 
+
+------------------------------------------------------------------------
+Separa los 2 grupos de VLANS
+* M5
+(PROFESORES Y ADMINISTRATIVOS)
+
+acces 10 permit 192.168.11.0 0.0.0.255
+acces 10 permit 192.168.12.0 0.0.0.255
+acces 10 permit 192.168.22.0 0.0.0.255
+acces 10 permit 192.168.23.0 0.0.0.255
+acces 10 permit 192.168.32.0 0.0.0.255
+acces 10 permit 192.168.33.0 0.0.0.255
+acces 10 permit 192.168.42.0 0.0.0.255
+acces 10 permit 192.168.43.0 0.0.0.255
+
+
+ahora asocio la access list a las interfaces correspondiente
+
+int g9/0.2
+ip access-g 10 out
+int g9/0.3
+ip access-g 10 out
+
+Ahora para que haya trafico de vlans invitados-estudiantes:
+acces 20 permit 192.168.10.0 0.0.0.255
+acces 20 permit 172.102.0.0 0.0.255.255
+acces 20 permit 192.168.21.0 0.0.0.255
+acces 20 permit 172.103.0.0 0.0.255.255
+acces 20 permit 192.168.31.0 0.0.0.255
+acces 20 permit 172.104.0.0 0.0.255.255
+acces 20 permit 192.168.41.0 0.0.0.255
+acces 20 permit 172.105.0.0 0.0.255.255
+
+int g9/0.1
+ip access-g 20 out
+int g9/0.4
+ip access-g 20 out
+
+* M8
+(PROFESORES Y ADMINISTRATIVOS)
+
+acces 10 permit 192.168.11.0 0.0.0.255
+acces 10 permit 192.168.12.0 0.0.0.255
+acces 10 permit 192.168.22.0 0.0.0.255
+acces 10 permit 192.168.23.0 0.0.0.255
+acces 10 permit 192.168.32.0 0.0.0.255
+acces 10 permit 192.168.33.0 0.0.0.255
+acces 10 permit 192.168.42.0 0.0.0.255
+acces 10 permit 192.168.43.0 0.0.0.255
+
+
+ahora asocio la access list a las interfaces correspondiente
+
+int g8/0.2
+ip access-g 10 out
+int g8/0.3
+ip access-g 10 out
+
+Ahora para que haya trafico de vlans invitados-estudiantes:
+acces 20 permit 192.168.10.0 0.0.0.255
+acces 20 permit 172.102.0.0 0.0.255.255
+acces 20 permit 192.168.21.0 0.0.0.255
+acces 20 permit 172.103.0.0 0.0.255.255
+acces 20 permit 192.168.31.0 0.0.0.255
+acces 20 permit 172.104.0.0 0.0.255.255
+acces 20 permit 192.168.41.0 0.0.0.255
+acces 20 permit 172.105.0.0 0.0.255.255
+
+int g8/0.1
+ip access-g 20 out
+int g8/0.4
+ip access-g 20 out
+
+* 41
+(PROFESORES Y ADMINISTRATIVOS)
+
+acces 10 permit 192.168.11.0 0.0.0.255
+acces 10 permit 192.168.12.0 0.0.0.255
+acces 10 permit 192.168.22.0 0.0.0.255
+acces 10 permit 192.168.23.0 0.0.0.255
+acces 10 permit 192.168.32.0 0.0.0.255
+acces 10 permit 192.168.33.0 0.0.0.255
+acces 10 permit 192.168.42.0 0.0.0.255
+acces 10 permit 192.168.43.0 0.0.0.255
+
+
+ahora asocio la access list a las interfaces correspondiente
+
+int g6/0.2
+ip access-g 10 out
+int g6/0.3
+ip access-g 10 out
+
+Ahora para que haya trafico de vlans invitados-estudiantes:
+acces 20 permit 192.168.10.0 0.0.0.255
+acces 20 permit 172.102.0.0 0.0.255.255
+acces 20 permit 192.168.21.0 0.0.0.255
+acces 20 permit 172.103.0.0 0.0.255.255
+acces 20 permit 192.168.31.0 0.0.0.255
+acces 20 permit 172.104.0.0 0.0.255.255
+acces 20 permit 192.168.41.0 0.0.0.255
+acces 20 permit 172.105.0.0 0.0.255.255
+
+int g6/0.1
+ip access-g 20 out
+int g6/0.4
+ip access-g 20 out
+
+
+* 42
+(PROFESORES Y ADMINISTRATIVOS)
+
+acces 10 permit 192.168.11.0 0.0.0.255
+acces 10 permit 192.168.12.0 0.0.0.255
+acces 10 permit 192.168.22.0 0.0.0.255
+acces 10 permit 192.168.23.0 0.0.0.255
+acces 10 permit 192.168.32.0 0.0.0.255
+acces 10 permit 192.168.33.0 0.0.0.255
+acces 10 permit 192.168.42.0 0.0.0.255
+acces 10 permit 192.168.43.0 0.0.0.255
+
+
+ahora asocio la access list a las interfaces correspondiente
+
+int g6/0.2
+ip access-g 10 out
+int g6/0.3
+ip access-g 10 out
+
+Ahora para que haya trafico de vlans invitados-estudiantes:
+acces 20 permit 192.168.10.0 0.0.0.255
+acces 20 permit 172.102.0.0 0.0.255.255
+acces 20 permit 192.168.21.0 0.0.0.255
+acces 20 permit 172.103.0.0 0.0.255.255
+acces 20 permit 192.168.31.0 0.0.0.255
+acces 20 permit 172.104.0.0 0.0.255.255
+acces 20 permit 192.168.41.0 0.0.0.255
+acces 20 permit 172.105.0.0 0.0.255.255
+
+int g6/0.1
+ip access-g 20 out
+int g6/0.4
+ip access-g 20 out
+
+--------------------------------------------------------------------------
+
+
+
 --------------------------------------------------------------
 PROTOCOLO EIGRP
 
@@ -262,7 +410,7 @@ end
 
 
 
-
+------------------------------
 
 
 -------------------------------------
