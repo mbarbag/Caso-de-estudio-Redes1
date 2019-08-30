@@ -1,0 +1,77 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+no ip cef
+no ipv6 cef
+!
+license udi pid CISCO1941/K9 sn FTX1524ZQEZ-
+license boot module c1900 technology-package securityk9
+!
+!
+crypto isakmp policy 1
+ encr 3des
+ hash md5
+ authentication pre-share
+ group 2
+!
+crypto isakmp key cisco address 200.1.1.2
+!
+!
+crypto ipsec transform-set TS esp-3des esp-md5-hmac
+!
+crypto map CMAP 10 ipsec-isakmp 
+ set peer 200.1.1.2
+ set transform-set TS 
+ match address TRAFICO-VPN
+!
+spanning-tree mode pvst
+!
+interface FastEthernet0/0
+ ip address 200.1.1.1 255.255.255.0
+ duplex auto
+ speed auto
+ crypto map CMAP
+!
+interface GigabitEthernet8/0
+ ip address 192.168.100.2 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet9/0
+ ip address 192.168.101.2 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet6/0
+ ip address 10.10.10.254 255.0.0.0
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 (aquí va la ip asociada a la llegada al router creado)
+!
+ip flow-export version 9
+!
+!
+ip access-list extended TRAFICO-VPN
+ permit ip 10.10.10.0 0.0.0.255 192.168.10.0 0.0.0.255
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+end
